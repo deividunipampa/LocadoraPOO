@@ -10,6 +10,7 @@ import InterfacesGraficas.Clientes.BuscarClienteFrame;
 import InterfacesGraficas.Clientes.ListarClientesFrame;
 import InterfacesGraficas.Clientes.RemoverClienteFrame;
 import InterfacesGraficas.Locacoes.BuscarLocacaoFrame;
+import InterfacesGraficas.Locacoes.RemoverLocacaoFrame;
 import InterfacesGraficas.Veiculos.AdicionarVeiculoFrame;
 
 import java.awt.event.ActionEvent;
@@ -111,6 +112,12 @@ public class PrincipalGUI extends JFrame {
                 System.out.println("Clicou em Listar todas locações");
             }
         });
+        removerLocacaoOption.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                RemoverLocacaoFrame removerLocacaoFrame = new RemoverLocacaoFrame(relacaoDeLocacoes);
+            }
+        });
+
         adicionarClienteOption.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 AdicionarClienteFrame panelCliente = null;

@@ -71,11 +71,15 @@ public class RelacaoDeLocacoes implements ILocacoes {
      */
     @Override
     public boolean remove(int codigo) {
-        for(Locacao locacao : locacoes) {
-            if(locacao.getCodigo() == codigo) {
-                locacoes.remove(locacao);
-                return true;
+        try {
+            for (Locacao locacao : locacoes) {
+                if (locacao.getCodigo() == codigo) {
+                    locacoes.remove(locacao);
+                    return true;
+                }
             }
+        }catch (IllegalArgumentException e) {
+            System.out.println("Erro: " + e.getMessage());
         }
         return false;
     }
