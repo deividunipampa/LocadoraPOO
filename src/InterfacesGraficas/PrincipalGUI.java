@@ -9,6 +9,7 @@ import InterfacesGraficas.Clientes.AdicionarClienteFrame;
 import InterfacesGraficas.Clientes.BuscarClienteFrame;
 import InterfacesGraficas.Clientes.ListarClientesFrame;
 import InterfacesGraficas.Clientes.RemoverClienteFrame;
+import InterfacesGraficas.Locacoes.BuscarLocacaoFrame;
 import InterfacesGraficas.Veiculos.AdicionarVeiculoFrame;
 
 import java.awt.event.ActionEvent;
@@ -55,10 +56,12 @@ public class PrincipalGUI extends JFrame {
         JMenuItem adicionarLocacaoOption = new JMenuItem("Adicionar");
         JMenuItem buscarLocacaoOption = new JMenuItem("Buscar");
         JMenuItem listarLocacaoOption = new JMenuItem("Exibir todos");
+        JMenuItem removerLocacaoOption = new JMenuItem("Remover");
         
         locacoesMenu.add(adicionarLocacaoOption);
         locacoesMenu.add(buscarLocacaoOption);
         locacoesMenu.add(listarLocacaoOption);
+        locacoesMenu.add(removerLocacaoOption);
         
         //Cria as opões de "Adicionar", "Listar" e "Buscar" no menu "Clientes"
         JMenuItem adicionarClienteOption = new JMenuItem("Adicionar");
@@ -96,7 +99,11 @@ public class PrincipalGUI extends JFrame {
         });
         buscarLocacaoOption.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Clicou em Buscar Locação");
+                try{
+                    BuscarLocacaoFrame buscarLocacaoFrame = new BuscarLocacaoFrame(relacaoDeLocacoes);
+                }catch (Exception e1){
+                    JOptionPane.showMessageDialog(null, "Ocorreu um erro: Cliente não encontrado!","Erro", JOptionPane.ERROR_MESSAGE);
+                };
             }
         });
         listarLocacaoOption.addActionListener(new ActionListener() {

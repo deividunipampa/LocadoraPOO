@@ -47,7 +47,7 @@ public class RelacaoDeLocacoes implements ILocacoes {
             }
             return conteudo;
         }
-        throw new NullPointerException("Não existem locações cadastradas");
+        throw new IllegalArgumentException("Não existem locações cadastradas");
     }
 
     /**
