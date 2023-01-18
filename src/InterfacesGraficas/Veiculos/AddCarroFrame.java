@@ -20,6 +20,7 @@ public class AddCarroFrame extends JFrame {
         this.relacaoDeVeiculos = relacaoDeVeiculos;
         setSize(1200, 800);
         setLocationRelativeTo(null);
+        setLayout( new FlowLayout());
 
         JPanel addCarroPanel = new JPanel();
 
@@ -33,12 +34,21 @@ public class AddCarroFrame extends JFrame {
         passageirosLabel = new JLabel("Cor:");
         passageirosField = new JTextField(20);
 
+
         btnCadastrar = new JButton("Cadastrar");
         btnLimpar = new JButton("Limpar");
 
         btnCadastrar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 //String placa, int ano, double valor, int passageiros, int portas, double quilometros, boolean arCondicionado
+                //colocar tudo em variaveis string e criar o eiuclo e add e lipar os campos e setar a visibulidade
+                String placa = placaField.getText();
+                int ano = Integer.parseInt(anoField.getText());
+                double valor = Double.parseDouble(valorField.getText());
+                int passageiros = Integer.parseInt(passageirosField.getText());
+                int portas = Integer.parseInt(portasField.getText());
+                double quilometros = Double.parseDouble(quilometrosField.getText());
+
 
             }
         });

@@ -16,6 +16,7 @@ public class AdicionarVeiculoFrame extends JFrame {
         this.relacaoDeVeiculos = relacaoDeVeiculos;
         setSize(1200, 800);
         setLocationRelativeTo(null);
+        setLayout( new FlowLayout() );
 
         JPanel adicionarPrincipal = new JPanel();
         adicionarPrincipal.setLayout(new GridLayout(30,20));
