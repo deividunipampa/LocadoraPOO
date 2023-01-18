@@ -9,6 +9,7 @@ import InterfacesGraficas.Clientes.AdicionarClienteFrame;
 import InterfacesGraficas.Clientes.BuscarClienteFrame;
 import InterfacesGraficas.Clientes.ListarClientesFrame;
 import InterfacesGraficas.Clientes.RemoverClienteFrame;
+import InterfacesGraficas.Veiculos.AdicionarVeiculoFrame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
