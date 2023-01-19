@@ -13,6 +13,7 @@ import InterfacesGraficas.Locacoes.BuscarLocacaoFrame;
 import InterfacesGraficas.Locacoes.ListarLocacoesFrame;
 import InterfacesGraficas.Locacoes.RemoverLocacaoFrame;
 import InterfacesGraficas.Veiculos.AdicionarVeiculoFrame;
+import InterfacesGraficas.Veiculos.RemoverVeiculoFrame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -76,10 +77,13 @@ public class PrincipalGUI extends JFrame {
         JMenuItem adicionarVeiculoOption = new JMenuItem("Adicionar");
         JMenuItem buscarVeiculoOption = new JMenuItem("Buscar");
         JMenuItem listarVeiculosOption = new JMenuItem("Exibir Todos");
+        JMenuItem removerVeiculoOption = new JMenuItem("Remover");
 
         veiculosMenu.add(adicionarVeiculoOption);
         veiculosMenu.add(buscarVeiculoOption);
         veiculosMenu.add(listarVeiculosOption);
+        veiculosMenu.add(removerVeiculoOption);
+
         
         // Adiciona ação ao clicar nas opções de menu
         adicionarLocacaoOption.addActionListener(new ActionListener() {
@@ -161,6 +165,13 @@ public class PrincipalGUI extends JFrame {
                 }catch (Exception e1){
                     JOptionPane.showMessageDialog(null,"Erro: Não foi possivel cadastrar!","Erro", JOptionPane.ERROR_MESSAGE);
                 }
+            }
+        });
+
+        removerVeiculoOption.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RemoverVeiculoFrame removerVeiculoFrame = new RemoverVeiculoFrame(relacaoDeVeiculos);
             }
         });
 

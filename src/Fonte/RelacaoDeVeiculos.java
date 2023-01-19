@@ -100,7 +100,7 @@ public String getInfo(String placa) {
         try {
             listaDeVeiculos.remove(get(placa));
             return true;
-        } catch (NullPointerException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("Erro: " + e.getMessage());
             return false;
         }
