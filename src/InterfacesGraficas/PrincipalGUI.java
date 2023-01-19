@@ -10,6 +10,7 @@ import InterfacesGraficas.Clientes.BuscarClienteFrame;
 import InterfacesGraficas.Clientes.ListarClientesFrame;
 import InterfacesGraficas.Clientes.RemoverClienteFrame;
 import InterfacesGraficas.Locacoes.BuscarLocacaoFrame;
+import InterfacesGraficas.Locacoes.ListarLocacoesFrame;
 import InterfacesGraficas.Locacoes.RemoverLocacaoFrame;
 import InterfacesGraficas.Veiculos.AdicionarVeiculoFrame;
 
@@ -96,8 +97,13 @@ public class PrincipalGUI extends JFrame {
             }
         });
         listarLocacaoOption.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Clicou em Listar todas locações");
+            public void actionPerformed (ActionEvent e) {
+                try {
+                    ListarLocacoesFrame listarLocacoesFrame = new ListarLocacoesFrame(relacaoDeLocacoes);
+                }catch (Exception e1){
+                    JOptionPane.showMessageDialog(null, "Ocorreu um erro: Nenhuma locação cadastrada!","Erro", JOptionPane.ERROR_MESSAGE);
+                };
+
             }
         });
         removerLocacaoOption.addActionListener(new ActionListener() {
