@@ -14,8 +14,11 @@ import InterfacesGraficas.Locacoes.BuscarLocacaoFrame;
 import InterfacesGraficas.Locacoes.ListarLocacoesFrame;
 import InterfacesGraficas.Locacoes.RemoverLocacaoFrame;
 import InterfacesGraficas.Veiculos.AdicionarVeiculoFrame;
+import InterfacesGraficas.Veiculos.BuscarVeiculoFrame;
+import InterfacesGraficas.Veiculos.ListarVeiculosFrame;
 import InterfacesGraficas.Veiculos.RemoverVeiculoFrame;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -160,6 +163,24 @@ public class PrincipalGUI extends JFrame {
                 }catch (Exception e1){
                     JOptionPane.showMessageDialog(null,"Erro: Não foi possivel cadastrar!","Erro", JOptionPane.ERROR_MESSAGE);
                 }
+            }
+        });
+
+        listarVeiculosOption.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    ListarVeiculosFrame listarVeiculosFrame = new ListarVeiculosFrame(relacaoDeVeiculos);
+                }catch (Exception e1){
+                    JOptionPane.showMessageDialog(null, "Ocorreu um erro: Nenhum veículo cadastrado!","Erro", JOptionPane.ERROR_MESSAGE);
+                };
+            }
+        });
+
+        buscarVeiculoOption.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                BuscarVeiculoFrame buscarVeiculoFrame = new BuscarVeiculoFrame(relacaoDeVeiculos);
             }
         });
 
