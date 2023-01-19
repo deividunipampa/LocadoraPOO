@@ -46,6 +46,12 @@ public class AdicionarVeiculoFrame extends JFrame {
                 setVisible(false);
             }
         });
+        addOnibus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddOnibusFrame addOnibusFrame = new AddOnibusFrame(relacaoDeVeiculos);
+            }
+        });
 
         setVisible(true);
         add(adicionarPrincipal, BorderLayout.CENTER);
