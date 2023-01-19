@@ -89,7 +89,7 @@ public class PrincipalGUI extends JFrame {
         // Adiciona ação ao clicar nas opções de menu
         adicionarLocacaoOption.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                AdicionarLocacaoFrame adicionarLocacaoFrame = new AdicionarLocacaoFrame();
+                AdicionarLocacaoFrame adicionarLocacaoFrame = new AdicionarLocacaoFrame(relacaoDeLocacoes,relacaoDeVeiculos,relacaoDeClientes);
             }
         });
         buscarLocacaoOption.addActionListener(new ActionListener() {
@@ -174,7 +174,7 @@ public class PrincipalGUI extends JFrame {
 
         
         
-        setTitle("Locadora Dequer");
+        setTitle("Locadora");
         setSize(1200, 800);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
