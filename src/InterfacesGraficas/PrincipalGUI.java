@@ -9,6 +9,7 @@ import InterfacesGraficas.Clientes.AdicionarClienteFrame;
 import InterfacesGraficas.Clientes.BuscarClienteFrame;
 import InterfacesGraficas.Clientes.ListarClientesFrame;
 import InterfacesGraficas.Clientes.RemoverClienteFrame;
+import InterfacesGraficas.Locacoes.AdicionarLocacaoFrame;
 import InterfacesGraficas.Locacoes.BuscarLocacaoFrame;
 import InterfacesGraficas.Locacoes.ListarLocacoesFrame;
 import InterfacesGraficas.Locacoes.RemoverLocacaoFrame;
@@ -88,7 +89,7 @@ public class PrincipalGUI extends JFrame {
         // Adiciona ação ao clicar nas opções de menu
         adicionarLocacaoOption.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Clicou em Adicionar Locacao");
+                AdicionarLocacaoFrame adicionarLocacaoFrame = new AdicionarLocacaoFrame();
             }
         });
         buscarLocacaoOption.addActionListener(new ActionListener() {
@@ -118,14 +119,8 @@ public class PrincipalGUI extends JFrame {
 
         adicionarClienteOption.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                AdicionarClienteFrame panelCliente = null;
-                try {
-                    panelCliente = new AdicionarClienteFrame(relacaoDeClientes);
-                } catch (Exception ex) {
-                    throw new RuntimeException(ex);
+                AdicionarClienteFrame panelCliente = new AdicionarClienteFrame(relacaoDeClientes);
                 }
-                System.out.println("Clicou em Adicionar Cliente");
-            }
         });
 
         //Ao clicar no botao listar clientes, ele recebe o resumo dos clientes, com o CPF e nome
