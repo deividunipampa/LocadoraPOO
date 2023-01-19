@@ -38,20 +38,14 @@ public class PrincipalGUI extends JFrame {
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
-        // Cria os menus "Arquivo, Locações, Clientes, e Veículos"
-        JMenu arquivoMenu = new JMenu("Arquivo");
+        // Cria os menus "Locações, Clientes, e Veículos"
         JMenu locacoesMenu = new JMenu("Locações");
         JMenu clientesMenu = new JMenu("Clientes");
         JMenu veiculosMenu = new JMenu("Veículos");
-        menuBar.add(arquivoMenu);
         menuBar.add(locacoesMenu);
         menuBar.add(clientesMenu);
         menuBar.add(veiculosMenu);
 
-        // Cria as opções "Salvar" no menu "Arquivo"
-        JMenuItem salvarOption = new JMenuItem("Salvar");
-        
-        arquivoMenu.add(salvarOption);
 
         // Cria as opções "Adicionar", "Listar" e "Buscar" no menu "Locações"
         JMenuItem adicionarLocacaoOption = new JMenuItem("Adicionar");
@@ -87,12 +81,6 @@ public class PrincipalGUI extends JFrame {
         veiculosMenu.add(listarVeiculosOption);
         
         // Adiciona ação ao clicar nas opções de menu
-        salvarOption.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Clicou em Salvar");
-            }
-        });
-        
         adicionarLocacaoOption.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Clicou em Adicionar Locacao");

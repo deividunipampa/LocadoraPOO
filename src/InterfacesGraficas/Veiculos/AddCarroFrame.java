@@ -13,6 +13,7 @@ public class AddCarroFrame extends JFrame {
     private JLabel placaLabel, anoLabel, valorLabel, passageirosLabel, portasLabel, quilometrosLabel, arCondicionadoLabel;
     private JTextField placaField, anoField, valorField, passageirosField, portasField, quilometrosField, arCondicionadoField;
     private JButton btnCadastrar, btnLimpar;
+    private JRadioButton jRadioButton;
 
     RelacaoDeVeiculos relacaoDeVeiculos;
     public AddCarroFrame(RelacaoDeVeiculos relacaoDeVeiculos){
