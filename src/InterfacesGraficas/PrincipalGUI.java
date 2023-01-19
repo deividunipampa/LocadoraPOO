@@ -89,6 +89,7 @@ public class PrincipalGUI extends JFrame {
         // Adiciona ação ao clicar nas opções de menu
         adicionarLocacaoOption.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                System.out.println("aqui locacao frame");
                 AdicionarLocacaoFrame adicionarLocacaoFrame = new AdicionarLocacaoFrame(relacaoDeLocacoes,relacaoDeVeiculos,relacaoDeClientes);
             }
         });

@@ -14,6 +14,8 @@ public class AdicionarLocacaoFrame extends JFrame {
     private RelacaoDeClientes relacaoDeClientes;
     private RelacaoDeVeiculos relacaoDeVeiculos;
     private JRadioButton seguroJRadioButton;
+    private JButton salvarButton;
+    private JPanel addLocacao;
 
     public AdicionarLocacaoFrame(RelacaoDeLocacoes relacaoDeLocacoes, RelacaoDeVeiculos relacaoDeVeiculos, RelacaoDeClientes relacaoDeClientes) {
         super("Adicionar Locação");
@@ -22,7 +24,7 @@ public class AdicionarLocacaoFrame extends JFrame {
         this.relacaoDeVeiculos = relacaoDeVeiculos;
         setSize(1200, 800);
         setLocationRelativeTo(null);
-        JPanel addLocacao = new JPanel();
+        addLocacao = new JPanel();
 
         cpfLabel = new JLabel("CPF:");
         cpfField = new JTextField(10);
@@ -31,12 +33,12 @@ public class AdicionarLocacaoFrame extends JFrame {
         dataInicialLabel = new JLabel("Data Inicial:");
         dataInicialField = new JTextField(10);
         dataFinalLabel = new JLabel("Data Final:");
-        dataInicialField = new JTextField(10);
+        dataFinalField = new JTextField(10);
 
         seguroJRadioButton = new JRadioButton("Seguro");
         seguroJRadioButton.setSelected(false);
 
-        JButton salvarButton = new JButton("Salvar");
+        salvarButton = new JButton("Salvar");
 
         salvarButton.addActionListener(new ActionListener() {
             @Override
@@ -57,7 +59,7 @@ public class AdicionarLocacaoFrame extends JFrame {
                         Locacao locacao = new Locacao(cliente, veiculo, seguro, dataInicial, dataFinal);
                         JOptionPane.showMessageDialog(null,"Locação cadastrada!","Sucesso!", JOptionPane.INFORMATION_MESSAGE);
                     }catch  (IllegalArgumentException g1) {
-                        JOptionPane.showMessageDialog(null,"Cliente não encontrado!","Não encontrado", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null,"Veículo não encontrado!","Não encontrado", JOptionPane.INFORMATION_MESSAGE);
                     }
                 }catch  (IllegalArgumentException g) {
                     JOptionPane.showMessageDialog(null,"Cliente não encontrado!","Não encontrado", JOptionPane.INFORMATION_MESSAGE);
