@@ -9,8 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AddCarroFrame extends JFrame {
-    private JLabel placaLabel, anoLabel, valorLabel, passageirosLabel, portasLabel, quilometrosLabel, arCondicionadoLabel;
-    private JTextField placaField, anoField, valorField, passageirosField, portasField, quilometrosField, arCondicionadoField;
+    private JLabel placaLabel, anoLabel, valorLabel, passageirosLabel, portasLabel, quilometrosLabel;
+    private JTextField placaField, anoField, valorField, passageirosField, portasField, quilometrosField;
     private JButton btnCadastrar, btnLimpar;
     private JRadioButton jRadioButton;
 
@@ -63,6 +63,8 @@ public class AddCarroFrame extends JFrame {
                 anoField.setText("");
                 valorField.setText("");
                 passageirosField.setText("");
+                portasField.setText("");
+                quilometrosField.setText("");
             }
         });
         // int portas, double quilometros, boolean arCondicionado

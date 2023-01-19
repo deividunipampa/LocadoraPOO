@@ -1,7 +1,6 @@
 package InterfacesGraficas.Veiculos;
 
 import Fonte.RelacaoDeVeiculos;
-import InterfacesGraficas.Veiculos.AddCarroFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -38,6 +37,13 @@ public class AdicionarVeiculoFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
             AddCarroFrame addCarroFrame = new AddCarroFrame(relacaoDeVeiculos);
             setVisible(false);
+            }
+        });
+        addCaminhao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddCaminhaoFrame addCaminhaoFrame = new AddCaminhaoFrame(relacaoDeVeiculos);
+                setVisible(false);
             }
         });
 
