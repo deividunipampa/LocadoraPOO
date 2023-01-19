@@ -24,7 +24,6 @@ public class BuscarClienteFrame extends JFrame {
         buscarPanel.add(cpfField);
 
         JButton buscarButton = new JButton("Buscar");
-        setVisible(true);
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -39,6 +38,6 @@ public class BuscarClienteFrame extends JFrame {
 
         add(buscarPanel, BorderLayout.CENTER);
         add(buscarButton, BorderLayout.SOUTH);
-
+        setVisible(true);
     }
 }

@@ -28,7 +28,7 @@ public class RelacaoDeVeiculos implements IVeiculos {
                 return veiculo;
             }
         }
-        throw new NullPointerException("Veiculo não encontrado!");
+        throw new IllegalArgumentException("Veiculo não encontrado!");
     }
 
     /**

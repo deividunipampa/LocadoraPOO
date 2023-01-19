@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLOutput;
 
 public class RemoverVeiculoFrame extends JFrame {
     RelacaoDeVeiculos relacaoDeVeiculos;
@@ -24,7 +25,6 @@ public class RemoverVeiculoFrame extends JFrame {
         buscarPanel.add(placaField);
 
         JButton removerButton = new JButton("Remover");
-        setVisible(true);
         removerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -40,6 +40,7 @@ public class RemoverVeiculoFrame extends JFrame {
 
         add(buscarPanel, BorderLayout.CENTER);
         add(removerButton, BorderLayout.SOUTH);
+        setVisible(true);
 
     }
 }

@@ -24,7 +24,6 @@ public class RemoverClienteFrame extends JFrame {
         buscarPanel.add(cpfField);
 
         JButton removerButton = new JButton("Remover");
-        setVisible(true);
         removerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -40,6 +39,7 @@ public class RemoverClienteFrame extends JFrame {
 
         add(buscarPanel, BorderLayout.CENTER);
         add(removerButton, BorderLayout.SOUTH);
+        setVisible(true);
 
     }
 }
